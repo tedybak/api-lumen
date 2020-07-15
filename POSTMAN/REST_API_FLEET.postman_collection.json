@@ -153,6 +153,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "FILTERING FLEET",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"filter\" : \"class\"\n}"
+				},
+				"url": {
+					"raw": "local.lumen.com/fleets/filtering",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"fleets",
+						"filtering"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
