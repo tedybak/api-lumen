@@ -10,9 +10,18 @@ class FleetTest extends TestCase
      *
      * @return void
      */
-    public function testIndexStatusCode_Should_Be_401()
+    public function testIndexStatusCodeShouldBe401()
     {
         $this->get('/fleets')->seeStatusCode(401);
+    }
 
+    public function testCreateNewResourceShouldShowStatusCode401()
+    {
+        $this->post('/fleets')->seeStatusCode(401);
+    }
+
+    public function testUpdateResourceShouldShowStatusCode401()
+    {
+        $this->put('/fleets')->seeStatusCode(405);
     }
 }

@@ -15,6 +15,12 @@ class FleetsController extends Controller
         return response()->json(['error' => 'Unauthorized'],401);
     }
 
+
+    public function show($id)
+    {
+        return response()->json(Fleet::find($id));
+    }
+
     function  store(Request $request){
 
          if( $request->isJson() ) {

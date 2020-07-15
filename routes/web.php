@@ -34,6 +34,7 @@ $router->group(['middleware' => ['auth']],  function () use ($router) {
 });
 
 $router->get('/fleets',['uses' => 'FleetsController@index']);
+$router->get('/fleets/{id}', ['uses' => 'FleetsController@show']);
 $router->delete('/fleets/{id}', ['uses' => 'FleetsController@delete']);
 
 // Protected routes
