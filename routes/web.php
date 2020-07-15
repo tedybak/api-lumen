@@ -23,7 +23,7 @@ echo <<<EOT
     <li>All request should be in a valid json format, is not allowed http request from browsers </li>
     <li>To login we should make a post request to /users/login, using name and password as credentials { "name": "administrator", "password": "Estocolmo1" } </li>
     <li>After login successfully we should receive a token, each protected route we should use the token in the headers </li>
-    <li>In order to filtering whe should target this enpoint fleets/filtering passing a json object like this { "filter" : "class"} </li>
+    <li>In order to filtering whe should target this end point fleets/filtering passing a json object like this { "filter" : "class"} </li>
     </ul>
 EOT;
 });

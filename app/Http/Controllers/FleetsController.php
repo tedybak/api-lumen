@@ -71,7 +71,9 @@ class FleetsController extends Controller
             $filtering_types = array("name", "class", "status");
 
             if (in_array("$filter", $filtering_types)) {
-                return Fleet::select('name','class', 'status')->orderBy($filter)->get();
+                $filtered =  Fleet::select('name','class', 'status')->orderBy($filter)->get();
+                $data = ['data' => $filtered];
+                return $data;
             }else{
                 return response()->json(['error' => 'Filter must be a valid '],401);
             }
