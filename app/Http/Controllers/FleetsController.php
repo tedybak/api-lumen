@@ -63,5 +63,22 @@ class FleetsController extends Controller
     }
 
 
+    public function filter(Request $request)
+    {
+        if( $request->isJson() ) {
+            $filter = $request->filter;
+
+            $filtering_types = array("name", "class", "status");
+
+            if (in_array("$filter", $filtering_types)) {
+                return Fleet::select('name','class', 'status')->orderBy($filter)->get();
+            }else{
+                return response()->json(['error' => 'Filter must be a valid '],401);
+            }
+        }
+        return response()->json(['error' => 'Unauthorized'],401);
+    }
+
+
 
 }
