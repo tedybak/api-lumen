@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "568ddb64-b860-48a6-8007-7e4d1774ba13",
+		"name": "REST_API_FLEET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET FLEET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "local.lumen.com/fleets",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"fleets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST FLEET",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Devastator\",\n    \"class\": \"Star Destroyer\",\n    \"crew\": 35000,\n    \"image\": \"https:\\\\url.to.image\",\n    \"value\": 1999.99,\n    \"status\": \"operational\",\n    \"armament\": [\n        {\n        \"title\": \"Turbo Laser\",\n        \"qty\": \"60\"\n        },\n        {\n        \"title\": \"Ion Cannons\",\n        \"qty\": \"60\"\n        },\n        {\n        \"title\": \"Tractor Beam\",\n        \"qty\": \"10\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "local.lumen.com/fleets",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"fleets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "3t73OE9b2wPPSxbJWMXoj6NZDLVYKsCLxZmw6CmtuEdKzA3OHnpUeqFULxEe",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"administrator\",\n        \"email\": \"teddybak@hotmail.com\",\n        \"password\": \"Estocolmo1\"\n    }"
+				},
+				"url": {
+					"raw": "local.lumen.com/users",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT FLEET",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"MBT Bakali\",\n    \"class\": \"MBT Star Destroyer\",\n    \"crew\": 35000,\n    \"image\": \"https:\\\\url.to.image\",\n    \"value\": 1999.99,\n    \"status\": \"operational\",\n    \"armament\": [\n        {\n        \"title\": \"MBT Turbo Laser\",\n        \"qty\": \"60\"\n        },\n        {\n        \"title\": \"MBT Ion Cannons\",\n        \"qty\": \"60\"\n        },\n        {\n        \"title\": \"MBT Tractor Beam\",\n        \"qty\": \"10\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "local.lumen.com/fleets/2",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"fleets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE FLEET",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "local.lumen.com/fleets/2",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"fleets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "7c131c06-1948-49d6-a47d-4fe65718f79d",
+		"name": "REST_API_HOMESTEAD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "3t73OE9b2wPPSxbJWMXoj6NZDLVYKsCLxZmw6CmtuEdKzA3OHnpUeqFULxEe",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\"token\": \"IDhRmlW2Fu95JLCpRMuSt03N9lQbc2EyvUg6OK9jOPNoQPCoBkbqATcvTTOG\"}\n"
+				},
+				"url": {
+					"raw": "192.168.10.10/users",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"10"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"administrator\",\n         \"password\": \"Estocolmo1\"\n    }\n  \n    "
+				},
+				"url": {
+					"raw": "192.168.10.10/users/login",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"10"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "3t73OE9b2wPPSxbJWMXoj6NZDLVYKsCLxZmw6CmtuEdKzA3OHnpUeqFULxEe",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"administrator\",\n        \"email\": \"teddybak@hotmail.com\",\n        \"password\": \"Estocolmo1\"\n    }"
+				},
+				"url": {
+					"raw": "local.lumen.com/users",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "DrAkV9ad9xT4KpQ1Hf1OyufBlUMuDtbqJnijLySWqrTG0Kgp1gjGmsYWvSnh",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"chani\",\n        \"email\": \"chani@hotmail.com\",\n        \"password\": \"Chani\"\n    }"
+				},
+				"url": {
+					"raw": "local.lumen.com/users",
+					"host": [
+						"local",
+						"lumen",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
