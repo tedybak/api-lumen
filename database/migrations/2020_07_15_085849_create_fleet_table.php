@@ -34,6 +34,6 @@ class CreateFleetTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fleet');
+        Schema::dropIfExists('fleets');
     }
 }
