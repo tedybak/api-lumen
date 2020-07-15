@@ -13,7 +13,6 @@ class UsersController extends Controller
 {
 
     function index(Request $request){
-        // las peticiones las quiero en json, no se puede hacer un get desde un navegador
         if( $request->isJson() ){
             return User::all();
         }
