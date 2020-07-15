@@ -28,6 +28,8 @@ echo <<<EOT
 EOT;
 });
 
+
+/* Fleets Routes  */
 // Protected routes
 $router->group(['middleware' => ['auth']],  function () use ($router) {
     $router->post('/fleets', ['uses' => 'FleetsController@store']);
@@ -37,12 +39,13 @@ $router->group(['middleware' => ['auth']],  function () use ($router) {
 $router->get('/fleets',['uses' => 'FleetsController@index']);
 $router->get('/fleets/{id}', ['uses' => 'FleetsController@show']);
 $router->delete('/fleets/{id}', ['uses' => 'FleetsController@delete']);
-
 $router->post('/fleets/filtering', ['uses' => 'FleetsController@filter']);
 
 
-// Protected routes
+/* Users Routes */
 $router->post('/users/login',['uses' => 'UsersController@getToken']);
+
+// Protected routes
 $router->group(['middleware' => ['auth']],  function () use ($router) {
     $router->get('users', ['uses' => 'UsersController@index']);
     $router->post('users', ['uses' => 'UsersController@store']);
